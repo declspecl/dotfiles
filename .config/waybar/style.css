@@ -27,8 +27,11 @@
 
 window#waybar {
     color: @text;
-    /* background-color: transparent; */
-    background-color: alpha(@base, 0.25);
+    background-color: transparent;
+}
+
+window#waybar > box {
+    margin: 12px 12px 0px 12px;
 }
 
 #network,
