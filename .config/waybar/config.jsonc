@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 32,
     "spacing": 0,
     "modules-left": [
         "network",
@@ -16,7 +16,8 @@
         "memory"
     ],
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%)"
+        "interval": 5,
+        "format-wifi": "{essid} ({signalStrength}%) "
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -41,14 +42,18 @@
         "spacing": 10
     },
     "clock": {
+        "interval": 1,
+        "format": "{:%Y-%m-%d | %H:%M:%S}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}%",
+        "interval": 5,
+        "format": "{usage}% ",
         "tooltip": true
     },
     "memory": {
-        "format": "{}%"
+        "interval": 5,
+        "format": "{}% "
     }
 }
