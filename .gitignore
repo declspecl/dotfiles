@@ -1,4 +1,9 @@
-/discord
-/Code
-/Vencord
-/JetBrains
+*
+!.gitignore
+!hypr/
+!kitty/
+!waybar/
+!mako/
+!nvim/
+!Thunar/
+!wofi
