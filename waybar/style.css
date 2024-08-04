@@ -27,7 +27,8 @@
 
 window#waybar {
     color: @text;
-    background-color: alpha(@base, 0.15);
+    /* background-color: transparent; */
+    background-color: alpha(@base, 0.25);
 }
 
 #network,
