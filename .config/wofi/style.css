@@ -17,6 +17,8 @@
 window {
     color: @text;
     background-color: @base;
+
+    border-radius: 16px;
 }
 
 #outer-box {
