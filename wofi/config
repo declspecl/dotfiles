@@ -1,0 +1,29 @@
+# https://manpages.ubuntu.com/manpages/jammy/man5/wofi.5.html#config%20options
+
+show = drun, run
+
+width  = 600
+height = 350
+
+prompt = Search for an application...
+
+allow_images = true
+allow_markup = true
+
+matching = contains
+
+insensitive = true
+
+location = center
+
+no_actions = true
+
+gtk_dark = true
+
+orientation    = vertical
+halign         = fill
+content_halign = fill
+
+filter_rate = 100
+
+image_size = 32
