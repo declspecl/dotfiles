@@ -30,11 +30,12 @@ window#waybar {
 }
 
 window#waybar > box {
-    margin: 12px 16px 0px 16px;
+    margin: 12px 12px 0px 12px;
 }
 
 #network,
 #pulseaudio,
+#custom-updates,
 #tray,
 #clock,
 #cpu,
@@ -56,6 +57,7 @@ box.modules-left {
 
 #network:hover,
 #pulseaudio:hover,
+#custom-updates:hover,
 #tray:hover {
     background-color: shade(@foam, 1.1);
 }
@@ -73,6 +75,7 @@ box.modules-center {
 }
 
 #workspaces button {
+    padding: 2px 8px;
     margin: 0 2px;
 
     color: @base;
