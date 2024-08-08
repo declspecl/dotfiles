@@ -21,7 +21,7 @@
     font-family: "JetbrainsMono Nerd Font";
     font-weight: 600;
 
-    transition: all ease 0.2s;
+    transition: background-color ease 0.2s;
 }
 
 window#waybar {
@@ -30,14 +30,17 @@ window#waybar {
 }
 
 window#waybar > box {
-    margin: 12px 12px 0px 12px;
+    margin: 12px 16px 0px 16px;
 }
 
 #network,
 #pulseaudio,
+#tray,
 #clock,
 #cpu,
-#memory {
+#memory,
+#workspaces,
+#temperature {
     padding: 0 8px;
 
     border-radius: 8px;
@@ -52,7 +55,8 @@ box.modules-left {
 }
 
 #network:hover,
-#pulseaudio:hover {
+#pulseaudio:hover,
+#tray:hover {
     background-color: shade(@foam, 1.1);
 }
 
@@ -68,6 +72,24 @@ box.modules-center {
     background-color: shade(@gold, 1.1);
 }
 
+#workspaces button {
+    margin: 0 2px;
+
+    color: @base;
+    background-color: @gold;
+}
+
+#workspaces button.active {
+    font-weight: 700;
+    background-color: shade(@gold, 0.9);
+}
+
+#workspaces button:hover {
+    background: unset;
+
+    background-color: shade(@gold, 1.1);
+}
+
 box.modules-right {
     padding: 4px 8px;
 
@@ -78,6 +100,7 @@ box.modules-right {
 }
 
 #cpu:hover,
-#memory:hover {
+#memory:hover,
+#temperature:hover {
     background-color: shade(@iris, 1.1);
 }

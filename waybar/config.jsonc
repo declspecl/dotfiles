@@ -10,11 +10,15 @@
         "tray"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+        "hyprland/workspaces"
     ],
     "modules-right": [
+        "temperature#cpu",
         "cpu",
-        "memory"
+        "temperature#nvme",
+        "memory",
+        "temperature#gpu"
     ],
     "network": {
         "interval": 5,
@@ -52,13 +56,27 @@
         "format-alt": "{:%H:%M:%S}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true
+    },
+    "temperature#cpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
+    },
     "cpu": {
         "interval": 5,
         "format": "{usage}% ",
         "tooltip": true
     },
+    "temperature#nvme": {
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input"
+    },
     "memory": {
         "interval": 5,
         "format": "{}% "
+    },
+    "temperature#gpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
     }
 }
