@@ -21,8 +21,10 @@ xdg-desktop-portal/
 xfce4/
 xsettingsd/
 yay/
+QtProject/
 QtProject.conf
 monitors.xml
 *.ini
 user-dirs.dirs
 user-dirs.locale
+clangd/
