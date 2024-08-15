@@ -22,6 +22,14 @@ setopt ignore_eof
 
 alias cls="clear"
 
+#################
+### functions ###
+#################
+
+function fzkill() {
+    ps aux | fzf --height 40% --layout=reverse --prompt="Select process to kill: " | awk '{print $2}' | xargs -r sudo kill
+}
+
 ######################
 ### ohmyzsh config ###
 ######################

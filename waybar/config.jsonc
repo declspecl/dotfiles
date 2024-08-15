@@ -8,7 +8,6 @@
     "modules-left": [
         "network",
         "pulseaudio",
-        "custom/updates",
         "tray"
     ],
     "modules-center": [
@@ -44,10 +43,6 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/updates": {
-        "format": "{} ⬤",
-        "exec": "pacman -Sup | wc -l"
     },
     "tray": {
         "spacing": 8
