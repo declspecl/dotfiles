@@ -3,6 +3,7 @@
 ################
 
 export PATH=$PATH:~/go/bin/
+export RUST_BACKTRACE=1
 
 ###################
 ### zsh modules ###
