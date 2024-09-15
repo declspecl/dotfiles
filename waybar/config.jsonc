@@ -19,7 +19,8 @@
         "cpu",
         "temperature#nvme",
         "memory",
-        "temperature#gpu"
+        "temperature#gpu",
+        "custom/gpu-usage"
     ],
     "network": {
         "interval": 5,
@@ -75,5 +76,11 @@
     },
     "temperature#gpu": {
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
+    },
+    "custom/gpu-usage": {
+        "exec": "cat /sys/class/hwmon/hwmon1/device/gpu_busy_percent",
+        "format": "GPU: {}%",
+        "return-type": "",
+        "interval": 1
     }
 }
