@@ -1,0 +1,25 @@
+get_brightness() {
+	brightness=$(brightnessctl g)
+    percentage=$(($brightness / 255))
+	echo "$percentage"
+}
+
+notify_user() {
+	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Brightness : $(get_brightness) %"
+}
+
+inc_brightness() {
+    brightnessctl s +10% && notify_user
+}
+
+dec_brightness() {
+    brightnessctl s 10%- && notify_user
+}
+
+if [[ "$1" == "--inc" ]]; then
+	inc_brightness
+elif [[ "$1" == "--dec" ]]; then
+	dec_brightness
+else
+	get_brightness
+fi

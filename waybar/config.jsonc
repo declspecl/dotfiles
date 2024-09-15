@@ -1,5 +1,8 @@
 {
     "layer": "top",
+    "output": "eDP-1",
+    // "output": "HDMI-A-1",
+    // "output": "DP-3",
     "position": "top",
     // "output": "HDMI-A-1",
     // "output": "DP-3",
@@ -19,12 +22,9 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "temperature#cpu",
         "cpu",
-        "temperature#nvme",
         "memory",
-        "temperature#gpu",
-        "custom/gpu-usage"
+        "battery"
     ],
     "network": {
         "interval": 5,
@@ -40,7 +40,8 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
+            // "hands-free": "",
+            "hands-free": "a",
             "headset": "",
             "phone": "",
             "portable": "",
@@ -63,28 +64,23 @@
         "all-outputs": true,
         "sort-by-number": true
     },
-    "temperature#cpu": {
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
-    },
     "cpu": {
         "interval": 5,
         "format": "{usage}% ",
         "tooltip": true
     },
-    "temperature#nvme": {
-        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input"
-    },
     "memory": {
         "interval": 5,
         "format": "{}% "
     },
-    "temperature#gpu": {
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
-    },
-    "custom/gpu-usage": {
-        "exec": "cat /sys/class/hwmon/hwmon1/device/gpu_busy_percent",
-        "format": "GPU: {}%",
-        "return-type": "",
-        "interval": 1
+    "battery": {
+        "bat": "BATT",
+        "interval": 60,
+        "states": {
+            "warning": 40,
+            "critical": 20
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
     }
 }
