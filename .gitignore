@@ -1,5 +1,4 @@
 *
-
 !.gitignore
 !hypr
 !hypr/**/*
@@ -18,3 +17,4 @@
 !wofi
 !wofi/**/*
 !.zshrc
+!install.sh
