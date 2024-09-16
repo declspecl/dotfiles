@@ -1,6 +1,9 @@
 # dotfiles
 
-My arch linux hyprland dotfiles.
+My arch dotfiles.
+Primarily hyprland and neovim configuration.
+
+Main color scheme used is [Rosé Pine](https://rosepinetheme.com/)
 
 ## Core Components
 - [zsh](https://www.zsh.org/) as shell of choice
