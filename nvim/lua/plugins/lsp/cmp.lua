@@ -90,7 +90,7 @@ return {
 
 			local servers = {
 				-- web
-				"html", "cssls", "eslint", "tsserver", "tailwindcss", "emmet_language_server", "htmx",
+				"html", "cssls", "eslint", "ts_ls", "tailwindcss", "emmet_language_server", "htmx",
 
 				-- misc
 				"cmake", "gopls", "clangd", "pyright", "dotls"

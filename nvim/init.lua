@@ -40,7 +40,7 @@ require("config")
 -- -- -- -- -- -- -- -- --
 require("lazy").setup({
     spec = {
-        { import = "plugins.colors.rose-pine" },
+        { import = "plugins.colors.miasma" },
         { import = "plugins.syntax" },
         { import = "plugins.navi" },
         { import = "plugins.misc" },

@@ -5,7 +5,7 @@
 vim.o.termguicolors = true
 
 return {
-	"xero/miasma.nvim",
+	"declspecl/miasma.nvim",
 	lazy = false,
 	priority = 1000,
 	init = function()
