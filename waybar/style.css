@@ -1,18 +1,14 @@
-@define-color base rgb(25, 23, 36);
-@define-color surface rgb(31, 29, 46);
-@define-color overlay rgb(38, 35, 58);
-@define-color muted rgb(110, 106, 134);
-@define-color subtle rgb(144, 140, 170);
-@define-color text rgb(224, 222, 244);
-@define-color love rgb(235, 111, 146);
-@define-color gold rgb(246, 193, 119);
-@define-color rose rgb(235, 188, 186);
-@define-color pine rgb(49, 116, 143);
-@define-color foam rgb(156, 207, 216);
-@define-color iris rgb(196, 167, 231);
-@define-color highlight-low rgb(33, 32, 46);
-@define-color highlight-med rgb(64, 61, 82);
-@define-color highlight-high rgb(82, 79, 103);
+@define-color background   rgb(24, 24, 24);
+@define-color foreground   rgb(194, 194, 176);
+@define-color black        rgb(24, 24, 24);
+@define-color black-bright rgb(96, 96, 96);
+@define-color red          rgb(104, 87, 66);
+@define-color green        rgb(95, 135, 95);
+@define-color yellow       rgb(179, 109, 67);
+@define-color blue         rgb(120, 130, 75);
+@define-color magenta      rgb(187, 119, 68);
+@define-color cyan         rgb(201, 165, 84);
+@define-color white        rgb(215, 196, 131);
 
 * {
     border: none;
@@ -21,89 +17,77 @@
     font-family: "JetbrainsMono Nerd Font";
     font-weight: 600;
 
+    transition: color ease 0.2s;
     transition: background-color ease 0.2s;
 }
 
-window#waybar {
-    color: @text;
-    background-color: transparent;
-}
+#waybar {
+    color: @foreground;
+    background-color: @background;
 
-window#waybar > box {
-    margin: 12px 12px 0px 12px;
+    border: 1px solid @black-bright;
+    border-radius: 8px;
 }
 
 #network,
 #pulseaudio,
-#custom-updates,
 #tray,
 #clock,
 #cpu,
 #memory,
 #workspaces,
-#temperature {
-    padding: 0 8px;
-
+#temperature,
+#custom-gpu-usage {
+    margin: 0 2px;
+    padding: 0 12px;
     border-radius: 8px;
 }
 
-box.modules-left {
-    padding: 4px 8px;
-    border-radius: 999px;
+/* leftmost widget */
+#network {
+    margin: 0 2px 0 0;
+}
 
-    color: @base;
-    background-color: @foam;
+/* rightmost widget */
+#custom-gpu-usage {
+    margin: 0 0 0 2px;
 }
 
 #network:hover,
 #pulseaudio:hover,
-#custom-updates:hover,
-#tray:hover {
-    background-color: shade(@foam, 1.1);
+#tray:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#custom-gpu-usage:hover {
+    color: @background;
+    background-color: shade(@cyan, 1.0);
 }
 
-box.modules-center {
-    padding: 4px 8px;
-    border-radius: 999px;
-
-    color: @base;
-    background-color: @gold;
-}
-
-#clock:hover {
-    background-color: shade(@gold, 1.1);
+box.modules-left,
+box.modules-center,
+box.modules-right {
+    padding: 4px;
 }
 
 #workspaces button {
-    padding: 2px 8px;
     margin: 0 2px;
+    padding: 4px 8px;
 
-    color: @base;
-    background-color: @gold;
+    color: @foreground;
+    background-color: @background;
 }
 
 #workspaces button.active {
     font-weight: 700;
-    background-color: shade(@gold, 0.9);
+    color: @background;
+    background-color: shade(@cyan, 1.0);
 }
 
 #workspaces button:hover {
+    color: @background;
     background: unset;
-
-    background-color: shade(@gold, 1.1);
+    background-color: shade(@yellow, 1.0);
 }
 
-box.modules-right {
-    padding: 4px 8px;
-
-    border-radius: 999px;
-
-    color: @base;
-    background-color: @iris;
-}
-
-#cpu:hover,
-#memory:hover,
-#temperature:hover {
-    background-color: shade(@iris, 1.1);
-}
