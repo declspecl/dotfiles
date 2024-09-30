@@ -3,7 +3,7 @@
 My arch dotfiles.
 Primarily hyprland and neovim configuration.
 
-Main color scheme used is [Rosé Pine](https://rosepinetheme.com/)
+Main color scheme used is [miasma](https://github.com/declspecl/miasma.nvim)
 
 ## Core Components
 - [zsh](https://www.zsh.org/) as shell of choice
