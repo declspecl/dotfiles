@@ -1,0 +1,16 @@
+[2024-10-01 10:21:43.154] [info] Using configuration file /home/dec/.config/waybar/config.jsonc
+[2024-10-01 10:21:43.157] [info] Using CSS file /home/dec/.config/waybar/style.css
+[2024-10-01 10:21:43.164] [error] style.css:41:4Junk at end of value for margin
+[2024-10-01 10:21:49.178] [info] Using configuration file /home/dec/.config/waybar/config.jsonc
+[2024-10-01 10:21:49.181] [info] Using CSS file /home/dec/.config/waybar/style.css
+[2024-10-01 10:21:49.181] [error] style.css:41:4Junk at end of value for margin
+[2024-10-01 10:22:03.316] [info] Using configuration file /home/dec/.config/waybar/config.jsonc
+[2024-10-01 10:22:03.318] [info] Using CSS file /home/dec/.config/waybar/style.css
+[2024-10-01 10:22:03.325] [info] Hyprland IPC starting
+[2024-10-01 10:22:03.325] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-10-01 10:22:03.449] [info] Bar configured (width: 1896, height: 40) for output: eDP-1
+[2024-10-01 10:22:38.004] [info] Using configuration file /home/dec/.config/waybar/config.jsonc
+[2024-10-01 10:22:38.007] [info] Using CSS file /home/dec/.config/waybar/style.css
+[2024-10-01 10:22:38.013] [info] Hyprland IPC starting
+[2024-10-01 10:22:38.013] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-10-01 10:22:38.135] [info] Bar configured (width: 1896, height: 40) for output: eDP-1
