@@ -11,8 +11,11 @@
         };
     };
 
-    services.xserver.displayManager.gdm = {
+    services.xserver = {
         enable = true;
-        wayland = true;
+            displayManager.gdm = {
+            enable = true;
+            wayland = true;
+        };
     };
 }
