@@ -35,6 +35,7 @@
             hyprpaper
 
             firefox
+            vesktop
             vscode
             jetbrains.idea-community
 
