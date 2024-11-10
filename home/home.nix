@@ -6,7 +6,6 @@
             "kitty"
             "mako"
             "nvim"
-            "wallpapers"
             "waybar"
             "wlogout"
         ];
@@ -22,6 +21,9 @@
         packages = with pkgs; [
             firefox
             wofi
+            mako
+            waybar
+            wlogout
             hyprpaper
         ];
 
