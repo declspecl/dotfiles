@@ -26,25 +26,25 @@ button:focus, button:active, button:hover {
 }
 
 #lock {
-    background-image: image(url("/home/dec/.dotfiles/icons/lock.png"));
+    background-image: image(url("/home/dec/.dotfiles/assets/icons/lock.png"));
 }
 
 #logout {
-    background-image: image(url("/home/dec/.dotfiles/icons/logout.png"));
+    background-image: image(url("/home/dec/.dotfiles/assets/icons/logout.png"));
 }
 
 #suspend {
-    background-image: image(url("/home/dec/.dotfiles/icons/suspend.png"));
+    background-image: image(url("/home/dec/.dotfiles/assets/icons/suspend.png"));
 }
 
 #hibernate {
-    background-image: image(url("/home/dec/.dotfiles/icons/hibernate.png"));
+    background-image: image(url("/home/dec/.dotfiles/assets/icons/hibernate.png"));
 }
 
 #shutdown {
-    background-image: image(url("/home/dec/.dotfiles/icons/shutdown.png"));
+    background-image: image(url("/home/dec/.dotfiles/assets/icons/shutdown.png"));
 }
 
 #reboot {
-    background-image: image(url("/home/dec/.dotfiles/icons/reboot.png"));
+    background-image: image(url("/home/dec/.dotfiles/assets/icons/reboot.png"));
 }
