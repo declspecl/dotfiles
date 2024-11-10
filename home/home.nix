@@ -28,7 +28,7 @@
         file = builtins.listToAttrs (map (dot: {
             name = ".config/${dot}";
             value = {
-                source = ./.dotfiles/${dot};
+                source = ./${dot};
             };
         }) manualDots);
     };
