@@ -60,6 +60,7 @@
         zsh.enable = true;
         git.enable = true;
         neovim = {
+            enable = true;
             defaultEditor = true;
         };
         hyprland = {
