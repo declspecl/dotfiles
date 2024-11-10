@@ -27,6 +27,10 @@
             jdk
             python3
             nodejs
+            go
+
+            lua-language-server
+            vscode-langservers-extracted
 
             wofi
             mako

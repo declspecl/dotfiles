@@ -19,6 +19,7 @@
         enable = true;
         pulse.enable = true;
     };
+    services.flatpak.enable = true;
 
     environment.systemPackages = with pkgs; [
         microcodeAmd
