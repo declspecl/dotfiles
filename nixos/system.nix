@@ -4,7 +4,7 @@
     nixpkgs.config.allowUnfree = true;
 
     i18n.defaultLocale = "en_US.UTF-8";
-    time.timeZone = "America/Michigan";
+    time.timeZone = "US/Michigan";
 
     networking.hostName = "specnix";
     networking.networkmanager.enable = true;
