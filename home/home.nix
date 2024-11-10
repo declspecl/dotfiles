@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, config, ...}:
     let
         manualDots = [
             "emacs"
@@ -49,7 +49,7 @@
         file = builtins.listToAttrs (map (dot: {
             name = ".config/${dot}";
             value = {
-                source = ./${dot};
+                source = config.lib.file.mkOutOfStoreSymlink ./${dot};
             };
         }) manualDots);
     };
