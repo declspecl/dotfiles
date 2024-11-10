@@ -45,6 +45,7 @@
         ripgrep
         fzf
         fd
+        ffmpeg
     ];
 
     fonts = {
