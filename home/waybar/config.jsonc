@@ -1,0 +1,90 @@
+{
+    "layer": "top",
+    "position": "top",
+    // "output": "HDMI-A-1",
+    // "output": "DP-3",
+    // "height": 32,
+    // "spacing": 0,
+    "margin-top": 12,
+    "margin-bottom": 0,
+    "margin-left": 12,
+    "margin-right": 12,
+    "modules-left": [
+        "network",
+        "pulseaudio",
+        "tray"
+    ],
+    "modules-center": [
+        "clock",
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "temperature#cpu",
+        "cpu",
+        "temperature#nvme",
+        "memory",
+        "temperature#gpu",
+        "custom/gpu-usage"
+    ],
+    "network": {
+        "interval": 5,
+        "format-wifi": "{essid} ({signalStrength}%) "
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "tray": {
+        "spacing": 8
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%Y-%m-%d | %H:%M:%S}",
+        "format-alt": "{:%H:%M:%S}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "all-outputs": true,
+        "sort-by-number": true
+    },
+    "temperature#cpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "{usage}% ",
+        "tooltip": true
+    },
+    "temperature#nvme": {
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input"
+    },
+    "memory": {
+        "interval": 5,
+        "format": "{}% "
+    },
+    "temperature#gpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
+    },
+    "custom/gpu-usage": {
+        "exec": "cat /sys/class/hwmon/hwmon1/device/gpu_busy_percent",
+        "format": "GPU: {}%",
+        "return-type": "",
+        "interval": 1
+    }
+}

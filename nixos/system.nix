@@ -1,22 +1,48 @@
 { pkgs, ... }: {
+    i18n.defaultLocale = "en_US.UTF-8";
+    time.timeZone = "America/Michigan";
+
+    networking.hostName = "specnix";
+    networking.networkmanager.enable = true;
+
+    console = {
+        keyMap = "us";
+        font = "Lat2-Terminus16";
+    };
+
+    services.pipewire = {
+        enable = true;
+        pulse.enable = true;
+    };
+
     environment.systemPackages = with pkgs; [
         vim
+        neovim
         kitty
         git
+        bash
         zsh
         wget
         curl
         htop
-        localstack
-        jdk
-        
+        emacs
     ];
 
-    virtualisation.docker = {
-        enable = true;
-        enableOnBoot = false;
+    programs = {
+        git.enable = true;
+        neovim = {
+            defaultEditor = true;
+        };
+        hyprland = {
+            enable = true;
+            xwayland.enable = true;
+        };
+        hyprlock.enable = true;
     };
 
-    programs.hyprland.enable = true;
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    serivces.hypridle.enable = true;
+
+    environment.sessionVariables = {
+        NIXOS_OZONE_WL = "1";
+    };
 }
