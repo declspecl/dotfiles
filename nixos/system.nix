@@ -26,6 +26,7 @@
 
         bash
         zsh
+        tmux
 
         libnotify
         pamixer
@@ -46,6 +47,7 @@
         ripgrep
         fzf
         fd
+        unzip
         ffmpeg
         fastfetch
     ];
