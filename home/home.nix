@@ -5,6 +5,7 @@
             "hypr"
             "kitty"
             "mako"
+            "nixpkgs"
             "nvim"
             "wofi"
             "waybar"
