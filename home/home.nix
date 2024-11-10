@@ -25,6 +25,7 @@
             cmake
             rustup
             jdk
+            maven
             python3
             nodejs
             go
