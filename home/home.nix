@@ -33,6 +33,7 @@
             waybar
             wlogout
             hyprpaper
+            nwg-look
 
             firefox
             vesktop
