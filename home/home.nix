@@ -38,7 +38,7 @@
     programs.zsh = {
         enable = true;
         enableCompletion = true;
-        augosuggestions.enable = true;
+        autosuggestions.enable = true;
         syntaxHighlighting.enable = true;
         shellAliases = {
             "cls" = "clear";
