@@ -30,6 +30,7 @@
         pamixer
         pavucontrol
         brightnessctl
+        wl-clipboard
 
         vim
         neovim
