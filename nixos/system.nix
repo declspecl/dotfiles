@@ -36,6 +36,13 @@
         fd
     ];
 
+    fonts = {
+        enableDefaultPackages = true;
+        packages = with pkgs; [
+            nerdfonts
+        ];
+    };
+
     programs = {
         zsh.enable = true;
         git.enable = true;
