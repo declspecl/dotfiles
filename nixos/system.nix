@@ -38,6 +38,7 @@
         kitty
 
         git
+        git-credential-manager
         wget
         curl
         htop
