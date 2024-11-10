@@ -6,6 +6,7 @@
             "kitty"
             "mako"
             "nvim"
+            "wofi"
             "waybar"
             "wlogout"
         ];
@@ -19,12 +20,25 @@
         stateVersion = "24.05";
 
         packages = with pkgs; [
-            firefox
+            gcc
+            clang
+            gnumake
+            cmake
+            rustup
+            jdk
+            python3
+            nodejs
+
             wofi
             mako
             waybar
             wlogout
             hyprpaper
+
+            firefox
+            vscode
+            jetbrains.idea-community
+
             pipes
             cava
             cbonsai
