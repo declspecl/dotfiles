@@ -1,14 +1,14 @@
 { pkgs, config, ...}:
     let
         manualDots = [
-            "emacs"
-            "hypr"
-            "kitty"
-            "mako"
-            "nvim"
-            "wofi"
-            "waybar"
-            "wlogout"
+            { name = "emacs";   mutable = true;  }
+            { name = "hypr";    mutable = false; }
+            { name = "kitty";   mutable = false; }
+            { name = "mako";    mutable = false; }
+            { name = "nvim";    mutable = true;  }
+            { name = "wofi";    mutable = false; }
+            { name = "waybar";  mutable = false; }
+            { name = "wlogout"; mutable = false; }
         ];
     in
 {
@@ -47,9 +47,9 @@
         ];
 
         file = builtins.listToAttrs (map (dot: {
-            name = ".config/${dot}";
+            name = ".config/${dot.name}";
             value = {
-                source = config.lib.file.mkOutOfStoreSymlink ./${dot};
+                source = if dot.mutable then (config.lib.file.mkOutOfStoreSymlink ./${dot.name}) else ./${dot.name};
             };
         }) manualDots);
     };
