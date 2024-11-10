@@ -21,16 +21,22 @@
     };
 
     environment.systemPackages = with pkgs; [
-        vim
-        neovim
-        kitty
-        git
+        microcodeAmd
+
         bash
         zsh
+
+        libnotify
+
+        vim
+        neovim
+        emacs
+        kitty
+
+        git
         wget
         curl
         htop
-        emacs
         ripgrep
         fzf
         fd
