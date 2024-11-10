@@ -46,6 +46,7 @@
         fzf
         fd
         ffmpeg
+        fastfetch
     ];
 
     fonts = {
