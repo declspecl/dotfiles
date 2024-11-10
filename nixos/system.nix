@@ -27,6 +27,9 @@
         zsh
 
         libnotify
+        pamixer
+        pavucontrol
+        brightnessctl
 
         vim
         neovim
