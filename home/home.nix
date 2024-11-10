@@ -63,7 +63,7 @@
                 HIST_STAMPS="yyyy-mm-dd"
                 PROMPT=" %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ "
             '';
-        }
+        };
     };
 
     programs.git = {
