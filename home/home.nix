@@ -90,6 +90,11 @@
         userEmail = "gavind2559@gmail.com";
         extraConfig = {
             pull.rebase = true;
+            credential = {
+                helper = "manager";
+                credentialStore = "cache";
+                "https://github.com".username = "declspecl";
+            };
         };
     };
 }
