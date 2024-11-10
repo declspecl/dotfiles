@@ -10,9 +10,9 @@
         font = "Lat2-Terminus16";
     };
 
-    services.lipinput.enable = true;
+    services.libinput.enable = true;
     services.pipewire = {
-        enable = true;
+        enable =xserver. true;
         pulse.enable = true;
     };
 
