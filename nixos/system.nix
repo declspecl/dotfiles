@@ -12,7 +12,7 @@
 
     services.libinput.enable = true;
     services.pipewire = {
-        enable =xserver. true;
+        enable = true;
         pulse.enable = true;
     };
 
