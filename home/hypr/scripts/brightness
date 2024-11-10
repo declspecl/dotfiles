@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 get_brightness() {
 	brightness=$(brightnessctl g)
-    percentage=$(($brightness / 255))
-	echo "$percentage"
+    # percentage=$(($brightness / 255))
+	echo "$brightness"
 }
 
 notify_user() {
-	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Brightness : $(get_brightness) %"
+	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Brightness : $(get_brightness)/255"
 }
 
 inc_brightness() {
