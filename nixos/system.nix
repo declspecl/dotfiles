@@ -29,6 +29,9 @@
         curl
         htop
         emacs
+        ripgrep
+        fzf
+        fd
     ];
 
     programs = {

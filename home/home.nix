@@ -25,6 +25,10 @@
             waybar
             wlogout
             hyprpaper
+            pipes
+            cava
+            cbonsai
+            cmatrix
         ];
 
         file = builtins.listToAttrs (map (dot: {
