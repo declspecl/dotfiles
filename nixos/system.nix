@@ -41,7 +41,7 @@
         hyprlock.enable = true;
     };
 
-    serivces.hypridle.enable = true;
+    services.hypridle.enable = true;
 
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";
