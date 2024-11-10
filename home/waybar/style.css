@@ -33,13 +33,13 @@
 #pulseaudio,
 #tray,
 #clock,
+#workspaces,
 #cpu,
 #memory,
-#workspaces,
-#temperature,
-#custom-gpu-usage {
+#battery {
     margin: 0 2px;
     padding: 0 12px;
+
     border-radius: 8px;
 }
 
@@ -49,7 +49,7 @@
 }
 
 /* rightmost widget */
-#custom-gpu-usage {
+#battery {
     margin: 0 0 0 2px;
 }
 
@@ -59,8 +59,7 @@
 #clock:hover,
 #cpu:hover,
 #memory:hover,
-#temperature:hover,
-#custom-gpu-usage:hover {
+#battery:hover {
     color: @background;
     background-color: shade(@cyan, 1.0);
 }
@@ -90,4 +89,3 @@ box.modules-right {
     background: unset;
     background-color: shade(@yellow, 1.0);
 }
-
