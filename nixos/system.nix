@@ -32,6 +32,7 @@
     ];
 
     programs = {
+        zsh.enable = true;
         git.enable = true;
         neovim = {
             defaultEditor = true;
