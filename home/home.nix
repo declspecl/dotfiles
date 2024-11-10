@@ -68,7 +68,7 @@
                 ps aux | fzf --height 40% --layout=reverse --prompt="Select process to kill: " | awk '{print $2}' | xargs -r sudo kill
             }
 
-            PROMPT=" %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ "
+            PROMPT=' %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ '
         '';
         sessionVariables = {
             RUST_BACKTRACE = "1";
@@ -76,11 +76,11 @@
         oh-my-zsh = {
             enable = true;
             theme = "robbyrussell";
-            plugins = [ "git" ];
+            plugins = [ "git" "python" "man" ];
             extraConfig = ''
-                zstyle ":omz:update" mode reminder
-                COMPLETION_WAITING_DOTS="true"
-                HIST_STAMPS="yyyy-mm-dd"
+                zstyle ':omz:update' mode reminder
+                COMPLETION_WAITING_DOTS='true'
+                HIST_STAMPS='yyyy-mm-dd'
             '';
         };
     };
