@@ -29,6 +29,7 @@
             python3
             nodejs
             go
+            awscli
 
             lua-language-server
             vscode-langservers-extracted
@@ -47,6 +48,8 @@
             vesktop
             vscode
             jetbrains.idea-community
+            spotify
+            figma-linux
 
             pipes
             cava
@@ -100,6 +103,7 @@
         userEmail = "gavind2559@gmail.com";
         package = pkgs.gitFull;
         extraConfig = {
+            init.defaultBranch = "main";
             pull.rebase = true;
             credential = {
                 helper = "manager";
