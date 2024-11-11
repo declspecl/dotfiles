@@ -52,7 +52,7 @@
         fastfetch
         sqlite
         grim
-        sqlurp
+        slurp
         hyprpicker
     ];
 
