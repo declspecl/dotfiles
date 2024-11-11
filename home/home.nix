@@ -97,6 +97,7 @@
         enable = true;
         userName = "dec";
         userEmail = "gavind2559@gmail.com";
+        package = pkgs.gitFull;
         extraConfig = {
             pull.rebase = true;
             credential = {
