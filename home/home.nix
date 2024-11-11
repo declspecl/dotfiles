@@ -39,6 +39,8 @@
             wlogout
             hyprpaper
             nwg-look
+            nautilus
+            xfce.thunar
 
             firefox
             vesktop
