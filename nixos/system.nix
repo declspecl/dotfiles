@@ -39,7 +39,7 @@
         emacs
         kitty
 
-        git
+        gitFull
         git-credential-manager
         wget
         curl
