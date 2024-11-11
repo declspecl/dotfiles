@@ -41,6 +41,7 @@
             nwg-look
             nautilus
             xfce.thunar
+            vlc
 
             firefox
             vesktop

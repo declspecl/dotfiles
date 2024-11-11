@@ -50,6 +50,10 @@
         unzip
         ffmpeg
         fastfetch
+        sqlite
+        grim
+        sqlurp
+        hyprpicker
     ];
 
     fonts = {
