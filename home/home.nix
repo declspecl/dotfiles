@@ -40,9 +40,10 @@
             wlogout
             hyprpaper
             nwg-look
-            nautilus
+            nemo
             xfce.thunar
             vlc
+            gruvbox-dark-gtk
 
             firefox
             vesktop
