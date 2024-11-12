@@ -38,6 +38,7 @@
             xfce.thunar
             vlc
             eza
+            gruvbox-dark-gtk
 
             firefox
             vesktop
