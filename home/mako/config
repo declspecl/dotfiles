@@ -1,35 +1,9 @@
-##############
-### COLORS ###
-##############
-
-# https://rosepinetheme.com/palette/ingredients/
-
-# base           = #191724
-# surface        = #1f1d2e
-# overlay        = #26233a
-# muted          = #636a86
-# subtle         = #908caa
-# text           = #e0def4
-# love           = #eb6f92
-# gold           = #f6c177
-# rose           = #ebbcba
-# pine           = #31748f
-# foam           = #9ccfd8
-# iris           = #c4a7e7
-# highlight-low  = #21202e
-# highlight-med  = #403d52
-# highlight-high = #524f67
-
-###################
-### MAKO CONFIG ###
-###################
-
 sort=-time
 
 layer=top
 
-text-color=#e0def4
-background-color=#191724
+text-color=#c2c2b0
+background-color=#181818
 
 margin=4
 padding=12
@@ -38,7 +12,7 @@ width=400
 height=200
 
 border-size=2
-border-color=#908caa
+border-color=#606060
 border-radius=12
 
 icons=1
@@ -50,13 +24,13 @@ default-timeout=5000
 font=JetBrainsMono Nerd Font Mono 14
 
 [urgency=low]
-border-color=#908caa
+border-color=#bb7744
 
 [urgency=normal]
-border-color=#c4a7e7
+border-color=#78824b
 
 [urgency=high]
-border-color=#eb6f92
+border-color=#c9a554
 
 [category=mpd]
 default-timeout=2000

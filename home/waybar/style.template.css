@@ -1,15 +1,3 @@
-@define-color background   rgb(24, 24, 24);
-@define-color foreground   rgb(194, 194, 176);
-@define-color black        rgb(24, 24, 24);
-@define-color black-bright rgb(96, 96, 96);
-@define-color red          rgb(104, 87, 66);
-@define-color green        rgb(95, 135, 95);
-@define-color yellow       rgb(179, 109, 67);
-@define-color blue         rgb(120, 130, 75);
-@define-color magenta      rgb(187, 119, 68);
-@define-color cyan         rgb(201, 165, 84);
-@define-color white        rgb(215, 196, 131);
-
 * {
     border: none;
 
