@@ -1,26 +1,14 @@
-@define-color background   rgb(24, 24, 24);
-@define-color foreground   rgb(194, 194, 176);
-@define-color black        rgb(24, 24, 24);
-@define-color black-bright rgb(96, 96, 96);
-@define-color red          rgb(104, 87, 66);
-@define-color green        rgb(95, 135, 95);
-@define-color yellow       rgb(179, 109, 67);
-@define-color blue         rgb(120, 130, 75);
-@define-color magenta      rgb(187, 119, 68);
-@define-color cyan         rgb(201, 165, 84);
-@define-color white        rgb(215, 196, 131);
-
 window {
-    color: @foreground;
-    background-color: @background;
+    color: rgb(194, 194, 176);
+    background-color: rgb(24, 24, 24);
 
     border-radius: 16px;
 }
 
 #outer-box {
-    background-color: @background;
+    background-color: rgb(24, 24, 24);
 
-    border: 1px solid @black-bright;
+    border: 1px solid rgb(96, 96, 96);
     border-radius: 16px;
 }
 
@@ -28,9 +16,9 @@ window {
     margin: 4px;
     padding: 0px 12px;
 
-    color: @foreground;
+    color: rgb(194, 194, 176);
     font-weight: 600;
-    background-color: @background;
+    background-color: rgb(24, 24, 24);
 
     border-radius: 16px;
 }
@@ -39,8 +27,6 @@ window {
     margin: 4px 0px;
 
     border-radius: 16px;
-
-    /* background-color: rgb(255,255,255); */
 }
 
 #input {
@@ -49,17 +35,17 @@ window {
 
     font-weight: 600;
 
-    color: @foreground;
-    background-color: @background;
+    color: rgb(194, 194, 176);
+    background-color: rgb(24, 24, 24);
 
-    border: 1px solid @black-bright;
+    border: 1px solid rgb(96, 96, 96);
     border-radius: 15px;
 
     outline: none;
 }
 
 #input:focus {
-    border: 1px solid @blue;
+    border: 1px solid rgb(120, 130, 75);
 }
 
 #entry {
@@ -72,8 +58,8 @@ window {
 }
 
 #entry:selected {
-    color: @background;
-    background-color: @magenta;
+    color: rgb(24, 24, 24);
+    background-color: rgb(187, 119, 68);
 
     border-radius: 16px;
 }
@@ -83,15 +69,15 @@ window {
 }
 
 #img:selected {
-    color: @background;
-    background-color: @magenta;
+    color: rgb(24, 24, 24);
+    background-color: rgb(187, 119, 68);
 
     border-radius: 16px;
 }
 
 #text:selected {
-    color: @background;
-    background-color: @magenta;
+    color: rgb(24, 24, 24);
+    background-color: rgb(187, 119, 68);
 
     border-radius: 16px;
 }
