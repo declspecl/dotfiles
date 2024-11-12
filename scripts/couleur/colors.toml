@@ -1,0 +1,14 @@
+current_theme = "miasma"
+
+[themes.miasma]
+background = "rgb(24, 24, 24)"
+background-alt = "rgb(96, 96, 96)"
+foreground = "rgb(194, 194, 176)"
+foreground-alt = "rgb(160, 160, 142)"
+primary = "rgb(187, 119, 68)"
+secondary = "rgb(120, 130, 75)"
+tertiary = "rgb(201, 165, 84)"
+quaternary = "rgb(179, 109, 67)"
+quinary = "rgb(95, 135, 95)"
+senary = "rgb(104, 87, 66)"
+septenary = "rgb(215, 196, 131)"
