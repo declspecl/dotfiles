@@ -1,0 +1,83 @@
+window {
+    color: %foreground%;
+    background-color: %background%;
+
+    border-radius: 16px;
+}
+
+#outer-box {
+    background-color: %background%;
+
+    border: 1px solid %background-alt%;
+    border-radius: 16px;
+}
+
+#inner-box {
+    margin: 4px;
+    padding: 0px 12px;
+
+    color: %foreground%;
+    font-weight: 600;
+    background-color: %background%;
+
+    border-radius: 16px;
+}
+
+#scroll {
+    margin: 4px 0px;
+
+    border-radius: 16px;
+}
+
+#input {
+    margin: 16px 12px 0px 12px;
+    padding: 8px 12px;
+
+    font-weight: 600;
+
+    color: %foreground%;
+    background-color: %background%;
+
+    border: 1px solid %background-alt%;
+    border-radius: 15px;
+
+    outline: none;
+}
+
+#input:focus {
+    border: 1px solid %secondary%;
+}
+
+#entry {
+    margin: 4px 0px;
+    padding: 4px;
+
+    border-radius: 16px;
+
+    background-color: transparent;
+}
+
+#entry:selected {
+    color: %background%;
+    background-color: %primary%;
+
+    border-radius: 16px;
+}
+
+#img {
+    margin-right: 8px;
+}
+
+#img:selected {
+    color: %background%;
+    background-color: %primary%;
+
+    border-radius: 16px;
+}
+
+#text:selected {
+    color: %background%;
+    background-color: %primary%;
+
+    border-radius: 16px;
+}
