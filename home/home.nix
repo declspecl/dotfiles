@@ -55,6 +55,12 @@
             cava
             cbonsai
             cmatrix
+            asciiquarium
+            sl
+            btop
+            lolcat
+            tty-clock
+            figlet
         ];
 
         file = builtins.listToAttrs (map (dot: {
