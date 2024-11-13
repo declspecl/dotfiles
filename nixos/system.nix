@@ -75,6 +75,12 @@
             xwayland.enable = true;
         };
         hyprlock.enable = true;
+        steam = {
+            enable = true;
+            remotePlay.openFirewall = true;
+            dedicatedServer.openFirewall = true;
+            localNetworkGameTransfers.openFirewall = true;
+        };
     };
 
     services.hypridle.enable = true;
