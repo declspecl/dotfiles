@@ -23,12 +23,6 @@
             clang
             gnumake
             cmake
-            rustup
-            jdk
-            maven
-            python3
-            nodejs
-            go
             awscli
 
             lua-language-server
@@ -72,50 +66,56 @@
         }) manualDots);
     };
 
-    programs.zsh = {
-        enable = true;
-        enableCompletion = true;
-        autosuggestion.enable = true;
-        syntaxHighlighting.enable = true;
-        shellAliases = {
-            "cls" = "clear";
-        };
-        initExtra = ''
-            setopt ignore_eof
-
-            function fzkill() {
-                ps aux | fzf --height 40% --layout=reverse --prompt="Select process to kill: " | awk '{print $2}' | xargs -r sudo kill
-            }
-
-            PROMPT=' %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ '
-        '';
-        sessionVariables = {
-            RUST_BACKTRACE = "1";
-        };
-        oh-my-zsh = {
+    programs = {
+        zsh = {
             enable = true;
-            theme = "robbyrussell";
-            plugins = [ "git" "python" "man" ];
-            extraConfig = ''
-                zstyle ':omz:update' mode reminder
-                COMPLETION_WAITING_DOTS='true'
-                HIST_STAMPS='yyyy-mm-dd'
-            '';
-        };
-    };
+            enableCompletion = true;
+            autosuggestion.enable = true;
+            syntaxHighlighting.enable = true;
+            shellAliases = {
+                "cls" = "clear";
+            };
+            initExtra = ''
+                setopt ignore_eof
 
-    programs.git = {
-        enable = true;
-        userName = "dec";
-        userEmail = "gavind2559@gmail.com";
-        package = pkgs.gitFull;
-        extraConfig = {
-            init.defaultBranch = "main";
-            pull.rebase = true;
-            credential = {
-                helper = "manager";
-                credentialStore = "cache";
-                "https://github.com".username = "declspecl";
+                function fzkill() {
+                    ps aux | fzf --height 40% --layout=reverse --prompt="Select process to kill: " | awk '{print $2}' | xargs -r sudo kill
+                }
+
+                PROMPT=' %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ '
+            '';
+            sessionVariables = {
+                RUST_BACKTRACE = "1";
+            };
+            oh-my-zsh = {
+                enable = true;
+                theme = "robbyrussell";
+                plugins = [ "git" "python" "man" ];
+                extraConfig = ''
+                    zstyle ':omz:update' mode reminder
+                    COMPLETION_WAITING_DOTS='true'
+                    HIST_STAMPS='yyyy-mm-dd'
+                '';
+            };
+        };
+        direnv = {
+            enable = true;
+            nix-direnv.enable = true;
+            enableZshIntegration = true;
+        };
+        git = {
+            enable = true;
+            userName = "dec";
+            userEmail = "gavind2559@gmail.com";
+            package = pkgs.gitFull;
+            extraConfig = {
+                init.defaultBranch = "main";
+                pull.rebase = true;
+                credential = {
+                    helper = "manager";
+                    credentialStore = "cache";
+                    "https://github.com".username = "declspecl";
+                };
             };
         };
     };
