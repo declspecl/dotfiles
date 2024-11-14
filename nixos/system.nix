@@ -38,6 +38,7 @@
         neovim
         emacs
         kitty
+        libreoffice-qt6-fresh
 
         gitFull
         git-credential-manager
