@@ -134,5 +134,14 @@
             package = pkgs.bibata-cursors;
             size = 20;
         };
+        gtk3 = {
+            bookmarks = [
+                "file://${config.home.homeDirectory}/Downloads Downloads"
+                "file://${config.home.homeDirectory}/Pictures Pictures"
+                "file://${config.home.homeDirectory}/Videos Videos"
+                "file://${config.home.homeDirectory}/programming programming"
+                "file:///mnt mnt"
+            ];
+        };
     };
 }
