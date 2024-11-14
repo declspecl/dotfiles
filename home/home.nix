@@ -37,7 +37,6 @@
             nemo
             xfce.thunar
             vlc
-            gruvbox-dark-gtk
 
             firefox
             vesktop
@@ -117,6 +116,23 @@
                     "https://github.com".username = "declspecl";
                 };
             };
+        };
+    };
+
+    gtk = {
+        enable = true;
+        theme = {
+            name = "gruvbox-dark";
+            package = pkgs.gruvbox-dark-gtk;
+        };
+        iconTheme = {
+            name = "oomox-gruvbox-dark";
+            package = pkgs.gruvbox-dark-icons-gtk;
+        };
+        cursorTheme = {
+            name = "Bibata-Modern-Ice";
+            package = pkgs.bibata-cursors;
+            size = 20;
         };
     };
 }
