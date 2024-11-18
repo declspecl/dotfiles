@@ -44,6 +44,7 @@
             jetbrains.idea-community
             spotify
             figma-linux
+            obsidian
 
             pipes
             cava
@@ -117,6 +118,61 @@
                 };
             };
         };
+        vscode = {
+            enable = true;
+            enableUpdateCheck = false;
+            mutableExtensionsDir = false;
+            enableExtensionUpdateCheck = false;
+            extensions = with pkgs.vscode-extensions; [
+                mkhl.direnv
+                rust-lang.rust-analyzer
+                vscodevim.vim
+                github.copilot
+                github.copilot-chat
+                tamasfe.even-better-toml
+                jdinhlife.gruvbox
+                ms-python.python
+                ms-python.vscode-pylance
+                esbenp.prettier-vscode
+                bbenoist.nix
+                pkief.material-icon-theme
+                bradlc.vscode-tailwindcss
+                ms-vscode.cpptools
+                ms-vscode.cmake-tools
+                ms-vscode.cpptools-extension-pack
+                twxs.cmake
+            ];
+            userSettings = {
+                workbench = {
+                    colorTheme = "Gruvbox Dark Hard";
+                    iconTheme = "material-icon-theme";
+                };
+                editor = {
+                    minimap.enabled = false;
+                    fontFamily = "'CaskaydiaCove Nerd Font Mono', 'JetBrains Nerd Font Mono', monospace";
+                    fontWeight = 600;
+                    fontLigatures = true;
+                    cursorStyle = "block";
+                    cursorBlinking = "blink";
+                    mouseWheelZoom = true;
+                    fontSize = 16;
+                };
+                window = {
+                    menuBarVisibility = "toggle";
+                };
+                files.exclude = {
+                    "**/.git" = false;
+                };
+                vim.handleKeys = {
+                    "<C-d>" = true;
+                    "<C-s>" = false;
+                    "<C-z>" = false;
+                    "<C-p>" = false;
+                };
+                direnv.restartAutomatic = true;
+                git.openRepositoryInParentFolders = "never";
+            };
+        };
     };
 
     gtk = {
@@ -137,6 +193,7 @@
         gtk3 = {
             bookmarks = [
                 "file://${config.home.homeDirectory}/Downloads Downloads"
+                "file://${config.home.homeDirectory}/Documents Documents"
                 "file://${config.home.homeDirectory}/Pictures Pictures"
                 "file://${config.home.homeDirectory}/Videos Videos"
                 "file://${config.home.homeDirectory}/programming programming"

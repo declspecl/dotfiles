@@ -29,6 +29,7 @@
         tmux
 
         libnotify
+        playerctl
         pamixer
         pavucontrol
         brightnessctl
