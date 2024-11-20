@@ -37,6 +37,7 @@
             nemo
             xfce.thunar
             vlc
+            eza
 
             firefox
             vesktop
@@ -73,7 +74,10 @@
             autosuggestion.enable = true;
             syntaxHighlighting.enable = true;
             shellAliases = {
-                "cls" = "clear";
+                ls = "eza";
+                cls = "clear";
+                hmbs = "home-manager build switch";
+                nrbs = "sudo nixos-rebuild switch";
             };
             initExtra = ''
                 setopt ignore_eof
