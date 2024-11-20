@@ -24,7 +24,7 @@ return {
             server = {
                 on_attach = function(client, bufnr)
                     if client.server_capabilities.inlayHintProvider then
-                        vim.lsp.inlay_hint.enable(bufnr, true)
+                        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
                     else
                         -- print("Inlay hints are not available for the current client")
                     end
@@ -40,9 +40,6 @@ return {
 				    vim.keymap.set("n", "<leader>sd", vim.lsp.buf.declaration, { remap = false, desc = "Show declaration" } )
 				    vim.keymap.set("n", "<leader>sr", vim.lsp.buf.references, { remap = false, desc = "Show references" } )
 				    vim.keymap.set("n", "<leader>sh", vim.lsp.buf.signature_help, { remap = false, desc = "Signature help" } )
-
-                    -- using nvim 0.10 inlay hints, dont need this
-                    -- require("lsp-inlayhints").on_attach(client, bufnr)
                 end,
                 settings = {
                     ["rust-analyzer"] = {
