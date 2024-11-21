@@ -2,6 +2,7 @@ current_theme = "miasma"
 
 [themes.miasma]
 name = "miasma"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/orange.jpeg"
 base00 = { r = 24, g = 24, b = 24 }
 base01 = { r = 42, g = 42, b = 42 }
 base02 = { r = 60, g = 60, b = 60 }
@@ -40,6 +41,15 @@ $base0e = rgb(%hex:base0e%)
 $base0f = rgb(%hex:base0f%)
 """
 output_file_path = "/home/dec/.dotfiles/home/hypr/modules/colors.conf"
+theme_overrides = {}
+
+[themeables.hyprpaper]
+name = "hyprpaper"
+template = """
+preload = %wallpaper%
+wallpaper = , %wallpaper%
+"""
+output_file_path = "/home/dec/.dotfiles/home/hypr/hyprpaper.conf"
 theme_overrides = {}
 
 [themeables.kitty]

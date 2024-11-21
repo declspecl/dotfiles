@@ -5,6 +5,7 @@ use serde::{Serialize, Deserialize};
 use crate::model::Color;
 
 pub type ThemeName = String;
+pub type WallpaperName = String;
 pub type ThemeableName = String;
 pub type Template = String;
 
@@ -28,6 +29,7 @@ impl Default for Configuration {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Theme {
     pub name: ThemeName,
+    pub wallpaper: WallpaperName,
     pub base00: Color,
     pub base01: Color,
     pub base02: Color,
@@ -80,6 +82,8 @@ pub struct Themeable {
 impl Themeable {
     pub fn render(&self, theme: &Theme) -> String {
         let mut rendered_template = self.template.clone();
+
+        rendered_template = rendered_template.replace("%wallpaper%", &theme.wallpaper);
 
         for (color_name, color) in theme.colors().into_iter() {
             rendered_template = rendered_template.replace(&format!("%{color_name}%"), &color.to_rgb_string());
