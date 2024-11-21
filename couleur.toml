@@ -1,0 +1,306 @@
+current_theme = "miasma"
+
+[themes.miasma]
+name = "miasma"
+base00 = { r = 24, g = 24, b = 24 }
+base01 = { r = 42, g = 42, b = 42 }
+base02 = { r = 60, g = 60, b = 60 }
+base03 = { r = 78, g = 78, b = 78 }
+base04 = { r = 96, g = 96, b = 96 }
+base05 = { r = 194, g = 194, b = 176 }
+base06 = { r = 223, g = 224, b = 194 }
+base07 = { r = 232, g = 232, b = 202 }
+base08 = { r = 95, g = 135, b = 95 }
+base09 = { r = 179, g = 109, b = 67 }
+base0a = { r = 201, g = 165, b = 84 }
+base0b = { r = 166, g = 201, b = 171 }
+base0c = { r = 120, g = 130, b = 75 }
+base0d = { r = 187, g = 119, b = 68 }
+base0e = { r = 215, g = 196, b = 131 }
+base0f = { r = 181, g = 207, b = 183 }
+
+[themeables.hyprland]
+name = "hyprland"
+template = """
+$base00 = rgb(%hex:base00%)
+$base01 = rgb(%hex:base01%)
+$base02 = rgb(%hex:base02%)
+$base03 = rgb(%hex:base03%)
+$base04 = rgb(%hex:base04%)
+$base05 = rgb(%hex:base05%)
+$base06 = rgb(%hex:base06%)
+$base07 = rgb(%hex:base07%)
+$base08 = rgb(%hex:base08%)
+$base09 = rgb(%hex:base09%)
+$base0a = rgb(%hex:base0a%)
+$base0b = rgb(%hex:base0b%)
+$base0c = rgb(%hex:base0c%)
+$base0d = rgb(%hex:base0d%)
+$base0e = rgb(%hex:base0e%)
+$base0f = rgb(%hex:base0f%)
+"""
+output_file_path = "/home/dec/.dotfiles/home/hypr/modules/colors.conf"
+theme_overrides = {}
+
+[themeables.kitty]
+name = "kitty"
+template = """
+hi
+background            #%hex:base00%
+foreground            #%hex:base05%
+selection_background  #%hex:base02%
+selection_foreground  #%hex:base05%
+
+cursor                #%hex:base04%
+cursor_text_color     #%hex:base05%
+
+url_color             #%hex:base09%
+
+color0                #%hex:base00%
+color8                #%hex:base04%
+
+color5                #%hex:base08%
+color13               #%hex:base08%
+
+color4                #%hex:base09%
+color12               #%hex:base09%
+
+color6                #%hex:base0a%
+color14               #%hex:base0a%
+
+color3                #%hex:base0b%
+color11               #%hex:base0b%
+
+color2                #%hex:base0c%
+color10               #%hex:base0c%
+
+color1                #%hex:base0d%
+color9                #%hex:base0d%
+
+color7                #%hex:base0e%
+color15               #%hex:base0e%
+"""
+output_file_path = "/home/dec/.dotfiles/home/kitty/current-theme.conf"
+theme_overrides = {}
+
+[themeables.mako]
+name = "mako"
+template = """
+sort=-time
+
+layer=top
+
+text-color=#%hex:base05%
+background-color=#%hex:base00%
+
+margin=4
+padding=12
+
+width=400
+height=200
+
+border-size=2
+border-color=#%hex:base04%
+border-radius=12
+
+icons=1
+max-icon-size=32
+
+ignore-timeout=0
+default-timeout=5000
+
+font=JetBrainsMono Nerd Font Mono 14
+
+[urgency=low]
+border-color=#%hex:base08%
+
+[urgency=normal]
+border-color=#%hex:base09%
+
+[urgency=high]
+border-color=#%hex:base0a%
+
+[category=mpd]
+default-timeout=2000
+group-by=category
+"""
+output_file_path = "/home/dec/.dotfiles/home/mako/config"
+theme_overrides = {}
+
+[themeables.waybar]
+name = "waybar"
+template = """
+* {
+    border: none;
+
+    font-size: 12px;
+    font-family: "JetbrainsMono Nerd Font";
+    font-weight: 600;
+
+    transition: color ease 0.2s;
+    transition: background-color ease 0.2s;
+}
+
+#waybar {
+    color: %rgb:base05%;
+    background-color: %rgb:base00%;
+
+    border: 1px solid %rgb:base04%;
+    border-radius: 8px;
+}
+
+#network,
+#pulseaudio,
+#tray,
+#clock,
+#cpu,
+#memory,
+#workspaces,
+#temperature,
+#custom-gpu-usage {
+    margin: 0 2px;
+    padding: 0 12px;
+    border-radius: 8px;
+}
+
+/* leftmost widget */
+#network {
+    margin: 0 2px 0 0;
+}
+
+/* rightmost widget */
+#custom-gpu-usage {
+    margin: 0 0 0 2px;
+}
+
+#network:hover,
+#pulseaudio:hover,
+#tray:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#custom-gpu-usage:hover {
+    color: %rgb:base00%;
+    background-color: shade(%rgb:base0a%, 1.0);
+}
+
+box.modules-left,
+box.modules-center,
+box.modules-right {
+    padding: 4px;
+}
+
+#workspaces button {
+    margin: 0 2px;
+    padding: 4px 8px;
+
+    color: %rgb:base05%;
+    background-color: %rgb:base00%;
+}
+
+#workspaces button.active {
+    font-weight: 700;
+    color: %rgb:base00%;
+    background-color: shade(%rgb:base0a%, 1.0);
+}
+
+#workspaces button:hover {
+    color: %rgb:base00%;
+    background: unset;
+    background-color: shade(%rgb:base0b%, 1.0);
+}
+"""
+output_file_path = "/home/dec/.dotfiles/home/waybar/style.css"
+theme_overrides = {}
+
+[themeables.wofi]
+name = "wofi"
+template = """
+window {
+    color: %rgb:base05%;
+    background-color: %rgb:base00%;
+
+    border-radius: 16px;
+}
+
+#outer-box {
+    background-color: %rgb:base00%;
+
+    border: 1px solid %rgb:base04%;
+    border-radius: 16px;
+}
+
+#inner-box {
+    margin: 4px;
+    padding: 0px 12px;
+
+    color: %rgb:base05%;
+    font-weight: 600;
+    background-color: %rgb:base00%;
+
+    border-radius: 16px;
+}
+
+#scroll {
+    margin: 4px 0px;
+
+    border-radius: 16px;
+}
+
+#input {
+    margin: 16px 12px 0px 12px;
+    padding: 8px 12px;
+
+    font-weight: 600;
+
+    color: %rgb:base05%;
+    background-color: %rgb:base00%;
+
+    border: 1px solid %rgb:base04%;
+    border-radius: 15px;
+
+    outline: none;
+}
+
+#input:focus {
+    border: 1px solid %rgb:base09%;
+}
+
+#entry {
+    margin: 4px 0px;
+    padding: 4px;
+
+    border-radius: 16px;
+
+    background-color: transparent;
+}
+
+#entry:selected {
+    color: %rgb:base00%;
+    background-color: %rgb:base08%;
+
+    border-radius: 16px;
+}
+
+#img {
+    margin-right: 8px;
+}
+
+#img:selected {
+    color: %rgb:base00%;
+    background-color: %rgb:base08%;
+
+    border-radius: 16px;
+}
+
+#text:selected {
+    color: %rgb:base00%;
+    background-color: %rgb:base08%;
+
+    border-radius: 16px;
+}
+"""
+output_file_path = "/home/dec/.dotfiles/home/wofi/style.css"
+theme_overrides = {}
+

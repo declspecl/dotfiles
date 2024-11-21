@@ -76,6 +76,5 @@ box.modules-right {
 #workspaces button:hover {
     color: rgb(24, 24, 24);
     background: unset;
-    background-color: shade(rgb(179, 109, 67), 1.0);
+    background-color: shade(rgb(166, 201, 171), 1.0);
 }
-

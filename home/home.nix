@@ -87,6 +87,7 @@
                 }
 
                 PROMPT=' %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ '
+                export PATH=~/.dotfiles/scripts/bin:$PATH
             '';
             sessionVariables = {
                 RUST_BACKTRACE = "1";

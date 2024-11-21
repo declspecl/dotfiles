@@ -24,10 +24,10 @@ default-timeout=5000
 font=JetBrainsMono Nerd Font Mono 14
 
 [urgency=low]
-border-color=#bb7744
+border-color=#5f875f
 
 [urgency=normal]
-border-color=#78824b
+border-color=#b36d43
 
 [urgency=high]
 border-color=#c9a554
