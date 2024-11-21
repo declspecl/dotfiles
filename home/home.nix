@@ -57,6 +57,14 @@
             lolcat
             tty-clock
             figlet
+
+            (rustPlatform.buildRustPackage {
+                pname = "couleur";
+                version = "0.1.0";
+
+                src = pkgs.lib.cleanSource ./scripts/couleur;
+                cargoLock.lockFile = ./scripts/couleur/Cargo.lock;
+            })
         ];
 
         file = builtins.listToAttrs (map (dot: {
@@ -87,7 +95,6 @@
                 }
 
                 PROMPT=' %{$fg[magenta]%}%0*%{$reset_color%} %{$fg[cyan]%}%0~%{$reset_color%} $(git_prompt_info)$ '
-                export PATH=~/.dotfiles/scripts/bin:$PATH
             '';
             sessionVariables = {
                 RUST_BACKTRACE = "1";
