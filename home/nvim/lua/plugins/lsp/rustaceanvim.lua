@@ -51,6 +51,9 @@ return {
                         },
                         check = {
                             command = "check"
+                        },
+                        diagnostic = {
+                            refreshSupport = false
                         }
                     }
                 }
