@@ -5,8 +5,8 @@ use cli::Cli;
 use config::{Configuration, ThemeName, Themeable, ThemeableName};
 
 mod cli;
-mod model;
 mod config;
+mod model;
 
 const CONFIG_FILE_PATH: &str = "/home/dec/.dotfiles/couleur.toml";
 
@@ -18,14 +18,18 @@ fn main() {
 
         let default_configuration = Configuration::default();
 
-        fs::write(CONFIG_FILE_PATH, toml_edit::ser::to_string(&default_configuration).expect("Failed to serialize default config"))
-            .expect(&format!("Failed to write config to config file at path \"{}\"", CONFIG_FILE_PATH));
+        fs::write(
+            CONFIG_FILE_PATH,
+            toml_edit::ser::to_string(&default_configuration).expect("Failed to serialize default config")
+        )
+        .expect(&format!(
+            "Failed to write config to config file at path \"{}\"",
+            CONFIG_FILE_PATH
+        ));
     }
 
-    let config_string = fs::read_to_string(CONFIG_FILE_PATH)
-        .expect(&format!("Failed to open config file at path \"{}\"", CONFIG_FILE_PATH));
-    let mut config: Configuration = toml_edit::de::from_str(&config_string)
-        .expect(&format!("Failed to parse config file at path \"{}\"", CONFIG_FILE_PATH));
+    let config_string = fs::read_to_string(CONFIG_FILE_PATH).expect(&format!("Failed to open config file at path \"{}\"", CONFIG_FILE_PATH));
+    let config: Configuration = toml_edit::de::from_str(&config_string).expect(&format!("Failed to parse config file at path \"{}\"", CONFIG_FILE_PATH));
 
     match cli.command {
         cli::Commands::GetTheme => {
@@ -41,19 +45,6 @@ fn main() {
 
             println!("Themeables: {:?}", all_themeable_names);
         },
-        cli::Commands::SetTheme { theme_name } => {
-            let all_theme_names = config.themes.keys().collect::<HashSet<&ThemeName>>();
-
-            if all_theme_names.contains(&theme_name) {
-                config.current_theme = theme_name;
-            }
-            else {
-                println!("Theme \"{}\" does not exist among the defined themes {:?}", theme_name, all_theme_names);
-            }
-
-            fs::write(CONFIG_FILE_PATH, toml_edit::ser::to_string(&config).expect("Failed to serialize config"))
-                .expect(&format!("Failed to write config to config file at path \"{}\"", CONFIG_FILE_PATH));
-        },
         cli::Commands::Render { themeable_name } => {
             let try_render_themeable = |themeable: &Themeable| {
                 if let Some(theme) = config.themes.get(&config.current_theme) {
@@ -61,8 +52,11 @@ fn main() {
 
                     let rendered_themeable = themeable.render(theme);
 
-                    fs::write(&themeable.output_file_path, rendered_themeable)
-                        .expect(&format!("Failed to write rendered themeable \"{}\" to path \"{}\"", themeable.name, themeable.output_file_path.to_string_lossy()));
+                    fs::write(&themeable.output_file_path, rendered_themeable).expect(&format!(
+                        "Failed to write rendered themeable \"{}\" to path \"{}\"",
+                        themeable.name,
+                        themeable.output_file_path.to_string_lossy()
+                    ));
                 }
                 else {
                     println!("Cannot render themeables with unknown theme \"{}\"", config.current_theme);

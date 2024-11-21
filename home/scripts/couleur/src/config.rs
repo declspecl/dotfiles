@@ -1,6 +1,6 @@
 use std::{collections::HashMap, path::PathBuf};
 
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 use crate::model::Color;
 
@@ -80,7 +80,10 @@ pub struct Themeable {
 }
 
 impl Themeable {
-    pub fn render(&self, theme: &Theme) -> String {
+    pub fn render(
+        &self,
+        theme: &Theme
+    ) -> String {
         let mut rendered_template = self.template.clone();
 
         rendered_template = rendered_template.replace("%wallpaper%", &theme.wallpaper);
@@ -94,5 +97,3 @@ impl Themeable {
         return rendered_template;
     }
 }
-
-

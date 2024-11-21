@@ -1,6 +1,6 @@
 use clap::{Parser, Subcommand};
 
-use crate::config::{ThemeName, ThemeableName};
+use crate::config::ThemeableName;
 
 #[derive(Parser)]
 #[command(version, about)]
@@ -14,11 +14,5 @@ pub enum Commands {
     GetTheme,
     ListThemes,
     ListThemeables,
-    SetTheme {
-        theme_name: ThemeName
-    },
-    Render {
-        themeable_name: Option<ThemeableName>
-    }
+    Render { themeable_name: Option<ThemeableName> }
 }
-

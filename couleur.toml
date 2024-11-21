@@ -1,8 +1,8 @@
-current_theme = "miasma"
+current_theme = "black-metal"
 
 [themes.miasma]
 name = "miasma"
-wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/orange.jpeg"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/etc/bw-peek.jpeg"
 base00 = { r = 24, g = 24, b = 24 }
 base01 = { r = 42, g = 42, b = 42 }
 base02 = { r = 60, g = 60, b = 60 }
@@ -19,6 +19,66 @@ base0c = { r = 120, g = 130, b = 75 }
 base0d = { r = 187, g = 119, b = 68 }
 base0e = { r = 215, g = 196, b = 131 }
 base0f = { r = 181, g = 207, b = 183 }
+
+[themes.black-metal]
+name = "black-metal"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/purple.jpeg"
+base00 = { r = 18, g = 18, b = 18 }
+base01 = { r = 32, g = 32, b = 32 }
+base02 = { r = 46, g = 46, b = 46 }
+base03 = { r = 60, g = 60, b = 60 }
+base04 = { r = 153, g = 153, b = 153 }
+base05 = { r = 193, g = 193, b = 193 }
+base06 = { r = 153, g = 153, b = 153 }
+base07 = { r = 193, g = 193, b = 193 }
+base08 = { r = 95, g = 135, b = 135 }
+base09 = { r = 170, g = 170, b = 170 }
+base0a = { r = 160, g = 102, b = 102 }
+base0b = { r = 221, g = 153, b = 153 }
+base0c = { r = 170, g = 170, b = 170 }
+base0d = { r = 136, g = 136, b = 136 }
+base0e = { r = 153, g = 153, b = 153 }
+base0f = { r = 68, g = 68, b = 68 }
+
+[themes.rose-pine]
+name = "rose-pine"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/purple.jpeg"
+base00 = { r = 35, g = 33, b = 54 }
+base01 = { r = 42, g = 39, b = 63 }
+base02 = { r = 57, g = 53, b = 82 }
+base03 = { r = 110, g = 108, b = 134 }
+base04 = { r = 144, g = 140, b = 170 }
+base05 = { r = 224, g = 222, b = 244 }
+base06 = { r = 224, g = 222, b = 244 }
+base07 = { r = 86, g = 82, b = 110 }
+base08 = { r = 235, g = 111, b = 146 }
+base09 = { r = 246, g = 193, b = 119 }
+base0a = { r = 234, g = 154, b = 151 }
+base0b = { r = 62, g = 143, b = 176 }
+base0c = { r = 156, g = 207, b = 216 }
+base0d = { r = 196, g = 167, b = 231 }
+base0e = { r = 246, g = 193, b = 119 }
+base0f = { r = 86, g = 82, b = 110 }
+
+[themes.nord]
+name = "nord"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/gray.jpeg"
+base00 = { r = 46, g = 52, b = 64 }
+base01 = { r = 59, g = 66, b = 82 }
+base02 = { r = 67, g = 76, b = 94 }
+base03 = { r = 76, g = 86, b = 106 }
+base04 = { r = 216, g = 222, b = 233 }
+base05 = { r = 229, g = 233, b = 240 }
+base06 = { r = 236, g = 239, b = 244 }
+base07 = { r = 143, g = 188, b = 187 }
+base08 = { r = 136, g = 192, b = 208 }
+base09 = { r = 129, g = 161, b = 193 }
+base0a = { r = 94, g = 129, b = 172 }
+base0b = { r = 191, g = 97, b = 106 }
+base0c = { r = 208, g = 135, b = 112 }
+base0d = { r = 235, g = 203, b = 139 }
+base0e = { r = 163, g = 190, b = 140 }
+base0f = { r = 180, g = 142, b = 173 }
 
 [themeables.hyprland]
 name = "hyprland"
@@ -55,7 +115,9 @@ theme_overrides = {}
 [themeables.kitty]
 name = "kitty"
 template = """
-hi
+dynamic_background_opacity yes
+background_opacity 0.85
+
 background            #%hex:base00%
 foreground            #%hex:base05%
 selection_background  #%hex:base02%
