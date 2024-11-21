@@ -2,8 +2,8 @@ sort=-time
 
 layer=top
 
-text-color=#c2c2b0
-background-color=#181818
+text-color=#c1c1c1
+background-color=#121212
 
 margin=4
 padding=12
@@ -12,7 +12,7 @@ width=400
 height=200
 
 border-size=2
-border-color=#606060
+border-color=#999999
 border-radius=12
 
 icons=1
@@ -24,13 +24,13 @@ default-timeout=5000
 font=JetBrainsMono Nerd Font Mono 14
 
 [urgency=low]
-border-color=#5f875f
+border-color=#5f8787
 
 [urgency=normal]
-border-color=#b36d43
+border-color=#aaaaaa
 
 [urgency=high]
-border-color=#c9a554
+border-color=#a06666
 
 [category=mpd]
 default-timeout=2000

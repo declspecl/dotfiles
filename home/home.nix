@@ -84,7 +84,7 @@
             shellAliases = {
                 ls = "eza";
                 cls = "clear";
-                hmbs = "home-manager build switch";
+                hmbs = "couleur render && home-manager build switch";
                 nrbs = "sudo nixos-rebuild switch";
             };
             initExtra = ''
