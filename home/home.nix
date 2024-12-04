@@ -48,7 +48,6 @@
             obsidian
 
             pipes
-            cava
             cbonsai
             cmatrix
             asciiquarium
