@@ -21,13 +21,13 @@
 #pulseaudio,
 #tray,
 #clock,
-#workspaces,
 #cpu,
 #memory,
-#battery {
+#workspaces,
+#temperature,
+#custom-gpu-usage {
     margin: 0 2px;
     padding: 0 12px;
-
     border-radius: 8px;
 }
 
@@ -37,7 +37,7 @@
 }
 
 /* rightmost widget */
-#battery {
+#custom-gpu-usage {
     margin: 0 0 0 2px;
 }
 
@@ -47,7 +47,8 @@
 #clock:hover,
 #cpu:hover,
 #memory:hover,
-#battery:hover {
+#temperature:hover,
+#custom-gpu-usage:hover {
     color: rgb(18, 18, 18);
     background-color: shade(rgb(160, 102, 102), 1.0);
 }

@@ -2,7 +2,7 @@ current_theme = "black-metal"
 
 [themes.miasma]
 name = "miasma"
-wallpaper = "/home/dec/.dotfiles/assets/wallpapers/etc/bw-peek.jpeg"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/etc/earth-1610.jpeg"
 base00 = { r = 24, g = 24, b = 24 }
 base01 = { r = 42, g = 42, b = 42 }
 base02 = { r = 60, g = 60, b = 60 }
@@ -22,7 +22,7 @@ base0f = { r = 181, g = 207, b = 183 }
 
 [themes.black-metal]
 name = "black-metal"
-wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/purple.jpeg"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/etc/earth-1610.jpeg"
 base00 = { r = 18, g = 18, b = 18 }
 base01 = { r = 32, g = 32, b = 32 }
 base02 = { r = 46, g = 46, b = 46 }
