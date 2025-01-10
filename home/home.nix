@@ -24,6 +24,7 @@
             gnumake
             cmake
             awscli
+            localstack
 
             lua-language-server
             vscode-langservers-extracted
@@ -35,9 +36,10 @@
             hyprpaper
             nwg-look
             nemo
-            xfce.thunar
             vlc
+            mpv
             eza
+            smile
 
             firefox
             vesktop
@@ -46,9 +48,10 @@
             spotify
             figma-linux
             obsidian
+            google-chrome
+            libreoffice-qt6
 
             pipes
-            cava
             cbonsai
             cmatrix
             asciiquarium
@@ -57,6 +60,9 @@
             lolcat
             tty-clock
             figlet
+
+            melonDS
+            vbam
 
             (rustPlatform.buildRustPackage {
                 pname = "couleur";
@@ -153,6 +159,8 @@
                 ms-vscode.cmake-tools
                 ms-vscode.cpptools-extension-pack
                 twxs.cmake
+                unifiedjs.vscode-mdx
+                usernamehw.errorlens
             ];
             userSettings = {
                 workbench = {

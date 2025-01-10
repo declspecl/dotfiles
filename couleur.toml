@@ -181,7 +181,7 @@ max-icon-size=32
 ignore-timeout=0
 default-timeout=5000
 
-font=JetBrainsMono Nerd Font Mono 14
+font=JetBrainsMono Nerd Font 14
 
 [urgency=low]
 border-color=#%hex:base08%
@@ -206,7 +206,7 @@ template = """
     border: none;
 
     font-size: 12px;
-    font-family: "JetbrainsMono Nerd Font";
+    font-family: "JetBrainsMono Nerd Font";
     font-weight: 600;
 
     transition: color ease 0.2s;
@@ -289,6 +289,11 @@ theme_overrides = {}
 [themeables.wofi]
 name = "wofi"
 template = """
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
 window {
     color: %rgb:base05%;
     background-color: %rgb:base00%;
@@ -308,7 +313,7 @@ window {
     padding: 0px 12px;
 
     color: %rgb:base05%;
-    font-weight: 600;
+    font-weight: 700;
     background-color: %rgb:base00%;
 
     border-radius: 16px;
@@ -324,7 +329,7 @@ window {
     margin: 16px 12px 0px 12px;
     padding: 8px 12px;
 
-    font-weight: 600;
+    font-weight: 700;
 
     color: %rgb:base05%;
     background-color: %rgb:base00%;

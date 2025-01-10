@@ -1,3 +1,8 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
 window {
     color: rgb(193, 193, 193);
     background-color: rgb(18, 18, 18);
@@ -17,7 +22,7 @@ window {
     padding: 0px 12px;
 
     color: rgb(193, 193, 193);
-    font-weight: 600;
+    font-weight: 700;
     background-color: rgb(18, 18, 18);
 
     border-radius: 16px;
@@ -33,7 +38,7 @@ window {
     margin: 16px 12px 0px 12px;
     padding: 8px 12px;
 
-    font-weight: 600;
+    font-weight: 700;
 
     color: rgb(193, 193, 193);
     background-color: rgb(18, 18, 18);

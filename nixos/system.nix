@@ -20,6 +20,7 @@
         pulse.enable = true;
     };
     services.flatpak.enable = true;
+    virtualisation.docker.enable = true;
 
     environment.systemPackages = with pkgs; [
         microcodeAmd
@@ -35,11 +36,11 @@
         brightnessctl
         wl-clipboard
 
+        nh
         vim
         neovim
         emacs
         kitty
-        libreoffice-qt6-fresh
 
         gitFull
         git-credential-manager
@@ -49,8 +50,10 @@
         ripgrep
         fzf
         fd
+        file
         unzip
         ffmpeg
+        ffmpegthumbnailer
         fastfetch
         sqlite
         grim
