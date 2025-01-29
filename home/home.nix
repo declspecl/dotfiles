@@ -92,6 +92,8 @@
                 cls = "clear";
                 hmbs = "couleur render && home-manager build switch";
                 nrbs = "sudo nixos-rebuild switch";
+                dr = "direnv reload";
+                da = "direnv allow";
             };
             initExtra = ''
                 setopt ignore_eof
