@@ -3,13 +3,24 @@ set -e
 
 echo "==> Installing pacman packages..."
 sudo pacman -Syu --needed \
-    mesa vulkan-radeon libva-mesa-driver \
+    ghostty kitty firefox \
+    waybar mako wofi \
+    hyprpaper hyprpicker nwg-look nemo \
+    vlc mpv eza grim slurp wl-clipboard playerctl \
+    pavucontrol pamixer brightnessctl tmux \
+    ripgrep fzf fd fastfetch wget htop \
+    neovim emacs-wayland \
+    clang make cmake aws-cli \
+    lua-language-server \
+    mesa vulkan-radeon mesa-utils libva-mesa-driver \
     wayland xorg-xwayland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
     gdm \
     pipewire pipewire-pulse wireplumber \
     bluez bluez-utils blueman \
     ffmpeg ffmpegthumbnailer \
-    docker docker-buildx
+    docker docker-buildx \
+    ttf-cascadia-code-nerd ttf-jetbrains-mono-nerd ttf-firacode-nerd \
+    cmatrix asciiquarium sl btop lolcat figlet
 
 echo "==> Installing yay (AUR helper)..."
 if ! command -v yay &>/dev/null; then
@@ -20,8 +31,23 @@ if ! command -v yay &>/dev/null; then
 fi
 
 echo "==> Installing AUR packages..."
-# yay -S --needed \
-#     example-aur-package
+yay -S --needed --noconfirm \
+    wlogout \
+    vesktop-bin \
+    visual-studio-code-bin \
+    jetbrains-toolbox \
+    spotify \
+    figma-linux-bin \
+    obsidian \
+    google-chrome \
+    libreoffice-fresh \
+    cursor-bin \
+    smile \
+    melonds \
+    vbam-wx \
+    cbonsai \
+    pipes.sh \
+    tty-clock
 
 echo "==> Enabling system services..."
 sudo systemctl enable NetworkManager
