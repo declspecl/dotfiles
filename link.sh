@@ -1,4 +1,4 @@
 #!/bin/sh
-
-sudo ln -s ~/.dotfiles/nixos /etc/nixos
-ln -s ~/.dotfiles/home ~/.config/home-manager
+mkdir -p ~/.config/home-manager
+ln -sf ~/.dotfiles/home/home.nix ~/.config/home-manager/home.nix
+echo "Linked. Run: home-manager switch"
