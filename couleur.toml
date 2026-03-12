@@ -173,7 +173,7 @@ height=200
 
 border-size=2
 border-color=#%hex:base04%
-border-radius=12
+border-radius=4
 
 icons=1
 max-icon-size=32
@@ -206,7 +206,7 @@ template = """
     border: none;
 
     font-size: 12px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Inter", "JetBrainsMono Nerd Font";
     font-weight: 600;
 
     transition: color ease 0.2s;
@@ -215,10 +215,7 @@ template = """
 
 #waybar {
     color: %rgb:base05%;
-    background-color: %rgb:base00%;
-
-    border: 1px solid %rgb:base04%;
-    border-radius: 8px;
+    background-color: rgba(%r:base00%, %g:base00%, %b:base00%, 0.65);
 }
 
 #network,
@@ -231,8 +228,8 @@ template = """
 #temperature,
 #custom-gpu-usage {
     margin: 0 2px;
-    padding: 0 12px;
-    border-radius: 8px;
+    padding: 0 8px;
+    border-radius: 4px;
 }
 
 /* leftmost widget */
@@ -260,15 +257,15 @@ template = """
 box.modules-left,
 box.modules-center,
 box.modules-right {
-    padding: 4px;
+    padding: 2px;
 }
 
 #workspaces button {
     margin: 0 2px;
-    padding: 4px 8px;
+    padding: 2px 6px;
 
     color: %rgb:base05%;
-    background-color: %rgb:base00%;
+    background-color: transparent;
 }
 
 #workspaces button.active {
@@ -298,14 +295,14 @@ window {
     color: %rgb:base05%;
     background-color: %rgb:base00%;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #outer-box {
     background-color: %rgb:base00%;
 
     border: 1px solid %rgb:base04%;
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #inner-box {
@@ -316,13 +313,13 @@ window {
     font-weight: 700;
     background-color: %rgb:base00%;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #scroll {
     margin: 4px 0px;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #input {
@@ -348,7 +345,7 @@ window {
     margin: 4px 0px;
     padding: 4px;
 
-    border-radius: 16px;
+    border-radius: 8px;
 
     background-color: transparent;
 }
@@ -357,7 +354,7 @@ window {
     color: %rgb:base00%;
     background-color: %rgb:base08%;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #img {
@@ -368,16 +365,57 @@ window {
     color: %rgb:base00%;
     background-color: %rgb:base08%;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #text:selected {
     color: %rgb:base00%;
     background-color: %rgb:base08%;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 """
 output_file_path = "/home/dec/.dotfiles/home/wofi/style.css"
+theme_overrides = {}
+
+[themeables.nwg-dock]
+name = "nwg-dock"
+template = """
+window {
+    background: transparent;
+}
+
+#box {
+    background-color: rgba(%r:base01%, %g:base01%, %b:base01%, 0.75);
+    border: 1px solid rgba(%r:base03%, %g:base03%, %b:base03%, 0.4);
+    border-radius: 24px;
+    padding: 6px 10px;
+    margin: 0;
+}
+
+button {
+    background: transparent;
+    border-radius: 12px;
+    padding: 2px;
+    margin: 0 2px;
+    border: none;
+    transition: all 150ms ease;
+}
+
+button:hover {
+    background-color: rgba(%r:base03%, %g:base03%, %b:base03%, 0.5);
+}
+
+button:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+image {
+    min-width: 40px;
+    min-height: 40px;
+}
+"""
+output_file_path = "/home/dec/.dotfiles/home/nwg-dock-hyprland/style.css"
 theme_overrides = {}
 

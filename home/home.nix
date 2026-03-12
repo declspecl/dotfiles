@@ -1,14 +1,16 @@
 { pkgs, config, ...}:
     let
         manualDots = [
-            { name = "emacs";   mutable = true;  }
-            { name = "hypr";    mutable = false; }
-            { name = "kitty";   mutable = false; }
-            { name = "mako";    mutable = false; }
-            { name = "nvim";    mutable = true;  }
-            { name = "wofi";    mutable = false; }
-            { name = "waybar";  mutable = false; }
-            { name = "wlogout"; mutable = false; }
+            { name = "emacs";               mutable = true;  }
+            { name = "fontconfig";          mutable = false; }
+            { name = "hypr";                mutable = false; }
+            { name = "kitty";               mutable = false; }
+            { name = "mako";                mutable = false; }
+            { name = "nwg-dock-hyprland";   mutable = false; }
+            { name = "nvim";                mutable = true;  }
+            { name = "wofi";                mutable = false; }
+            { name = "waybar";              mutable = false; }
+            { name = "wlogout";             mutable = false; }
         ];
     in
 {
@@ -99,16 +101,13 @@
     gtk = {
         enable = true;
         theme = {
-            name = "gruvbox-dark";
-            package = pkgs.gruvbox-dark-gtk;
+            name = "WhiteSur-Dark";
         };
         iconTheme = {
-            name = "oomox-gruvbox-dark";
-            package = pkgs.gruvbox-dark-icons-gtk;
+            name = "WhiteSur-dark";
         };
         cursorTheme = {
-            name = "Bibata-Modern-Ice";
-            package = pkgs.bibata-cursors;
+            name = "WhiteSur-cursors";
             size = 20;
         };
         gtk3 = {

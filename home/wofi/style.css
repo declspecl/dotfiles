@@ -7,14 +7,14 @@ window {
     color: rgb(193, 193, 193);
     background-color: rgb(18, 18, 18);
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #outer-box {
     background-color: rgb(18, 18, 18);
 
     border: 1px solid rgb(153, 153, 153);
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #inner-box {
@@ -25,13 +25,13 @@ window {
     font-weight: 700;
     background-color: rgb(18, 18, 18);
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #scroll {
     margin: 4px 0px;
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #input {
@@ -57,7 +57,7 @@ window {
     margin: 4px 0px;
     padding: 4px;
 
-    border-radius: 16px;
+    border-radius: 8px;
 
     background-color: transparent;
 }
@@ -66,7 +66,7 @@ window {
     color: rgb(18, 18, 18);
     background-color: rgb(95, 135, 135);
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #img {
@@ -77,12 +77,12 @@ window {
     color: rgb(18, 18, 18);
     background-color: rgb(95, 135, 135);
 
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 #text:selected {
     color: rgb(18, 18, 18);
     background-color: rgb(95, 135, 135);
 
-    border-radius: 16px;
+    border-radius: 8px;
 }

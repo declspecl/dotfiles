@@ -92,6 +92,9 @@ impl Themeable {
             rendered_template = rendered_template.replace(&format!("%{color_name}%"), &color.to_rgb_string());
             rendered_template = rendered_template.replace(&format!("%rgb:{color_name}%"), &color.to_rgb_string());
             rendered_template = rendered_template.replace(&format!("%hex:{color_name}%"), &color.to_hex_string());
+            rendered_template = rendered_template.replace(&format!("%r:{color_name}%"), &color.r.to_string());
+            rendered_template = rendered_template.replace(&format!("%g:{color_name}%"), &color.g.to_string());
+            rendered_template = rendered_template.replace(&format!("%b:{color_name}%"), &color.b.to_string());
         }
 
         return rendered_template;

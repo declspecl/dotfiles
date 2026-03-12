@@ -2,7 +2,7 @@
     border: none;
 
     font-size: 12px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Inter", "JetBrainsMono Nerd Font";
     font-weight: 600;
 
     transition: color ease 0.2s;
@@ -11,10 +11,7 @@
 
 #waybar {
     color: rgb(193, 193, 193);
-    background-color: rgb(18, 18, 18);
-
-    border: 1px solid rgb(153, 153, 153);
-    border-radius: 8px;
+    background-color: rgba(18, 18, 18, 0.65);
 }
 
 #network,
@@ -27,8 +24,8 @@
 #temperature,
 #custom-gpu-usage {
     margin: 0 2px;
-    padding: 0 12px;
-    border-radius: 8px;
+    padding: 0 8px;
+    border-radius: 4px;
 }
 
 /* leftmost widget */
@@ -56,15 +53,15 @@
 box.modules-left,
 box.modules-center,
 box.modules-right {
-    padding: 4px;
+    padding: 2px;
 }
 
 #workspaces button {
     margin: 0 2px;
-    padding: 4px 8px;
+    padding: 2px 6px;
 
     color: rgb(193, 193, 193);
-    background-color: rgb(18, 18, 18);
+    background-color: transparent;
 }
 
 #workspaces button.active {
