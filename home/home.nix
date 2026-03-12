@@ -3,6 +3,7 @@
         manualDots = [
             { name = "emacs";               mutable = true;  }
             { name = "fontconfig";          mutable = false; }
+            { name = "ghostty";             mutable = false; }
             { name = "hypr";                mutable = false; }
             { name = "kitty";               mutable = false; }
             { name = "mako";                mutable = false; }
@@ -57,6 +58,10 @@
                 gcaa = "git commit -a --amend";
             };
             initContent = ''
+                # Completion caching
+                zstyle ':completion:*' use-cache yes
+                zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
+
                 setopt ignore_eof
 
                 function fzkill() {
@@ -68,9 +73,13 @@
                 # mise (universal version manager)
                 eval "$(mise activate zsh)"
 
-                # sdkman (Java/JVM toolchains)
+                # sdkman (Java/JVM toolchains) - Lazy Load
                 export SDKMAN_DIR="$HOME/.sdkman"
-                [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+                sdk() {
+                    unset -f sdk
+                    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+                    sdk "$@"
+                }
             '';
             sessionVariables = {
                 RUST_BACKTRACE = "1";

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import shutil
 import subprocess
@@ -22,6 +24,7 @@ PACMAN_PACKAGES = [
     "pavucontrol",
     "pamixer",
     "brightnessctl",
+    "cpupower",
     "bluez",
     "bluez-utils",
     "blueman",
@@ -59,12 +62,14 @@ PACMAN_PACKAGES = [
 
     # development
     "clang",
+    "openmp",
     "make",
     "cmake",
     "aws-cli",
     "lua-language-server",
     "docker",
     "docker-buildx",
+    "openai-codex",
 
     # system & drivers
     "mesa",
@@ -105,6 +110,7 @@ AUR_PACKAGES = [
     "kvantum-theme-whitesur-git",
 
     # daily utils
+    "zen-browser-bin",
     "vesktop-bin",
     "spotify",
     "smile",
