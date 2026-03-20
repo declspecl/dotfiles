@@ -22,23 +22,23 @@ base0f = { r = 181, g = 207, b = 183 }
 
 [themes.black-metal]
 name = "black-metal"
-wallpaper = "/home/dec/.dotfiles/assets/wallpapers/astralgrave/purple.jpeg"
+wallpaper = "/home/dec/.dotfiles/assets/wallpapers/p3r/rooftop.jpeg"
 base00 = { r = 18, g = 18, b = 18 }
 base01 = { r = 32, g = 32, b = 32 }
-base02 = { r = 46, g = 46, b = 46 }
-base03 = { r = 60, g = 60, b = 60 }
-base04 = { r = 153, g = 153, b = 153 }
-base05 = { r = 193, g = 193, b = 193 }
-base06 = { r = 153, g = 153, b = 153 }
-base07 = { r = 193, g = 193, b = 193 }
-base08 = { r = 95, g = 135, b = 135 }
-base09 = { r = 170, g = 170, b = 170 }
-base0a = { r = 160, g = 102, b = 102 }
-base0b = { r = 221, g = 153, b = 153 }
-base0c = { r = 170, g = 170, b = 170 }
-base0d = { r = 136, g = 136, b = 136 }
-base0e = { r = 153, g = 153, b = 153 }
-base0f = { r = 68, g = 68, b = 68 }
+base02 = { r = 60, g = 60, b = 60 }
+base03 = { r = 78, g = 78, b = 78 }
+base04 = { r = 96, g = 96, b = 96 }
+base05 = { r = 194, g = 194, b = 176 }
+base06 = { r = 223, g = 224, b = 194 }
+base07 = { r = 232, g = 232, b = 202 }
+base08 = { r = 95, g = 135, b = 95 }
+base09 = { r = 179, g = 109, b = 67 }
+base0a = { r = 201, g = 165, b = 84 }
+base0b = { r = 166, g = 201, b = 171 }
+base0c = { r = 120, g = 130, b = 75 }
+base0d = { r = 187, g = 119, b = 68 }
+base0e = { r = 215, g = 196, b = 131 }
+base0f = { r = 181, g = 207, b = 183 }
 
 [themes.rose-pine]
 name = "rose-pine"
@@ -106,8 +106,11 @@ theme_overrides = {}
 [themeables.hyprpaper]
 name = "hyprpaper"
 template = """
-preload = %wallpaper%
-wallpaper = , %wallpaper%
+wallpaper {
+    monitor = 
+    path = %wallpaper%
+    fit_mode = cover
+}
 """
 output_file_path = "/home/dec/.dotfiles/home/hypr/hyprpaper.conf"
 theme_overrides = {}
@@ -153,6 +156,45 @@ color7                #%hex:base0e%
 color15               #%hex:base0e%
 """
 output_file_path = "/home/dec/.dotfiles/home/kitty/current-theme.conf"
+theme_overrides = {}
+
+[themeables.ghostty]
+name = "ghostty"
+template = """
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
+cursor-style = block
+mouse-hide-while-typing = true
+window-decoration = false
+confirm-close-surface = false
+
+background-opacity = 0.85
+background = #%hex:base00%
+foreground = #%hex:base05%
+selection-background = #%hex:base02%
+selection-foreground = #%hex:base05%
+
+cursor-color = #%hex:base04%
+cursor-text = #%hex:base05%
+
+palette = 0=#%hex:base00%
+palette = 8=#%hex:base04%
+palette = 1=#%hex:base0d%
+palette = 9=#%hex:base0d%
+palette = 2=#%hex:base0c%
+palette = 10=#%hex:base0c%
+palette = 3=#%hex:base0b%
+palette = 11=#%hex:base0b%
+palette = 4=#%hex:base09%
+palette = 12=#%hex:base09%
+palette = 5=#%hex:base08%
+palette = 13=#%hex:base08%
+palette = 6=#%hex:base0a%
+palette = 14=#%hex:base0a%
+palette = 7=#%hex:base0e%
+palette = 15=#%hex:base0e%
+"""
+output_file_path = "/home/dec/.dotfiles/home/ghostty/config"
 theme_overrides = {}
 
 [themeables.mako]
@@ -418,4 +460,3 @@ image {
 """
 output_file_path = "/home/dec/.dotfiles/home/nwg-dock-hyprland/style.css"
 theme_overrides = {}
-

@@ -18,6 +18,10 @@ PACMAN_PACKAGES = [
     "slurp",
     "wl-clipboard",
     "nemo",
+    "typst",
+    "gnu-free-fonts",
+    "gsfonts",
+    "obs-studio",
 
     # i/o & hardware
     "playerctl",
@@ -66,9 +70,11 @@ PACMAN_PACKAGES = [
     "make",
     "cmake",
     "aws-cli",
+    "pnpm",
     "lua-language-server",
     "docker",
     "docker-buildx",
+    "docker-compose",
     "openai-codex",
 
     # system & drivers
@@ -118,6 +124,8 @@ AUR_PACKAGES = [
     "obsidian",
     "google-chrome",
     "libreoffice-fresh",
+    "marp-cli",
+    "ebgaramond-otf",
 
     # ricing
     "wlogout",
